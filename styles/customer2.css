@@ -36,6 +36,7 @@ body {
 		background: rgba(30,30,30);
 }
 .testim {
+    height: 100%;
 		width: 100%;
 		position: absolute;
 		top: 50%;
@@ -52,6 +53,7 @@ body {
     max-width: 1020px;
     padding: 40px 20px;
     margin: auto;
+    height: 100%;
 }
 
 .testim .arrow {
