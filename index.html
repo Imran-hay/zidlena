@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +44,7 @@
       <nav class="md:border-2 md:border-b-[#075985] flex md:flex-row flex-col md:justify-around py-2 pl-3 lg:pl-0">
         <div class="flex flex-row justify-between pr-3">
           <div class="grid content-center">
-            <div class='flex flex-row gap-1'><img src='images/Logo.png' alt='zidlena arabian mejlis logo' class='h-[42px]'/><h1 class='my-0 py-0 text-black'>Zidlena<span class='block'>Mejlis</span></h1><img src='images/Logo.png' alt='zidlena arabian mejlis logo2' class='h-[42px]'/></div>
+            <div class='flex flex-row gap-1'><img src='images/Logo.png' alt='zidlena arabian mejlis logo' class='h-[42px]'/><h1 class='my-0 py-0 text-black english-content'>Zidlena<span class='block english-content'>Mejlis</span></h1><h1 class='my-0 py-0 text-black amharic-content'>ዚድለና<span class='block'>መጅሊስ</span></h1><img src='images/Logo.png' alt='zidlena arabian mejlis logo2' class='h-[42px]'/></div>
           </div>
           <div class="col-start-12 grid content-center pr-3">
             <button class="md:hidden" onclick='collapse()'>
@@ -52,27 +54,22 @@
         </div>
         <div id="menu" class="hidden md:grid content-center mt-2 md:mt-0">
           <ul class="md:flex md:flex-row flex-col gap-7">
-            <li class="mb-1 font-bold text-sm text-cyan-700">
-              <a href="#home">
-              Home
-              
-                </a>
+            <li class="mb-1 font-bold text-sm text-cyan-700 hover:text-green-500">
+              <a href="#home" class="cursor-pointer english-content" id="english-content">Home</a>
+              <a href="#home" class="cursor-pointer amharic-content" id="amharic-content">መነሻገፅ</a>
             </li>
-            <li class="mb-1 font-bold text-sm text-cyan-700">
-              <a href="#about">
-                 About Us</a>
+            <li class="mb-1 font-bold text-sm text-cyan-700 hover:text-green-500">
+              <a href="#about" class="cursor-pointer english-content">About Us</a>
+              <a href="#about" class="cursor-pointer amharic-content">ስለ እኛ</a>
             </li>
-            <li class="mb-1 font-bold text-sm text-cyan-700">
-              <a href='#products'>
-              Products
-                
-              </a>
+            <li class="mb-1 font-bold text-sm text-cyan-700 hover:text-green-500">
+              <a href='#products' class="cursor-pointer english-content">Products</a>
+              <a href='#products' class="cursor-pointer amharic-content">ምርቶች</a>
             </li>
-            <li class="mb-1 font-bold text-sm text-cyan-700">
-              <a href="#contact">
-              Contact Us
+            <li class="mb-1 font-bold text-sm text-cyan-700 hover:text-green-500">
+              <a href="#contact" class="cursor-pointer english-content">Contact Us</a>
+              <a href='#products' class="cursor-pointer amharic-content">አግኙን</a>
 
-              </a>
             </li>
           </ul>
         </div>
@@ -124,15 +121,22 @@
                     <div class="flex justify-center absolute z-1 lg:top-1/2 md:top-1/3 top-1/3 w-full">
                       <div class="md:w-2/3 w-full">
                         <header>
-                        <h1 class="text-center text-2xl md:text-3xl sm:2xl lg:text-5xl mb-4 animate-charcter">
+                        <h1 class="text-center text-2xl md:text-3xl sm:2xl lg:text-5xl mb-4 animate-charcter english-content">
                           Zidlena Arabian Mejlis
+                         </h1>
+                         <h1 class="text-center text-2xl md:text-3xl sm:2xl lg:text-5xl mb-4 animate-charcter amharic-content">
+                          ዚድለና አረቢያን መጅሊስ
                          </h1>
 
                         </header>
                  
-                        <p class="text-center text-3xl animate-charcter2 mb-1">
+                        <p class="text-center text-3xl animate-charcter2 mb-1 english-content">
                          Crafting Timeless Elegance for Your Home
                           </p>
+
+                          <p class="text-center text-3xl animate-charcter2 mb-1 amharic-content">
+                            ለቤትዎ ጊዜ የማይሽረው ውበትን መፍጠር
+                             </p>
                        
                       </div>
                     </div>
@@ -146,10 +150,22 @@
                   <div class="absolute h-full w-full bg-slate-0/90 bottom-0">
                     <div class="flex justify-center absolute z-1 md:top-1/2 top-5 p-2 w-full">
                       <div class="md:w-2/3 w-full">
-                        <p class="text-center animate-charcter4">
-                         At Zidlena Arabian Majlis, we take pride in our 3-year journey as a quality furniture producer in Ethiopia. Inspired by the desire to create a household product that combines elegance and affordability.
+                        <header>
+                          <h1 class="text-center text-2xl md:text-3xl sm:2xl lg:text-5xl mb-4 animate-charcter english-content">
+                            About Us
+                           </h1>
+                           <h1 class="text-center text-2xl md:text-3xl sm:2xl lg:text-5xl mb-4 animate-charcter amharic-content">
+                            ስለ እኛ
+                           </h1>
+  
+                          </header>
+                        <p class="text-center animate-charcter4 english-content">
+                         At Zidlena Arabian Majlis, we take pride in our 7-year journey as a quality furniture producer in Ethiopia.
                          
                            </p>
+                           <p class="text-center animate-charcter4 amharic-content">
+                            ከሰባት አመታት በላይ ልምድ ባካበተው ድርጅታችን በጥራታቸው ልዪ የሆኑ አረብያን መጅሊሶችን በማምረት ይታወቃል
+                              </p>
                       </div>
                     </div>
                   </div>
@@ -161,9 +177,21 @@
                   <div class="absolute h-full w-full bg-slate-0/90 bottom-0">
                     <div class="flex justify-center absolute z-1 md:top-1/2 top-5 p-2 w-full">
                       <div class="md:w-2/3 w-full">
-                        <p class="text-center animate-charcter3">
-                       Discover the essense of Arabian Majlis Elevate your living spaces with the timeless elegance of Zidlena's Arabian majlis collection. Crafted by our skilled artisans, each piece combine with uncompromising quality 
+                        <header>
+                          <h1 class="text-center text-2xl md:text-3xl sm:2xl lg:text-5xl mb-4 animate-charcter english-content">
+                            Why Choose Us?
+                           </h1>
+                           <h1 class="text-center text-2xl md:text-3xl sm:2xl lg:text-5xl mb-4 animate-charcter amharic-content">
+                            ለምን እኛን ይመርጣሉ?
+                           </h1>
+  
+                          </header>
+                        <p class="text-center animate-charcter3 english-content">
+                          As a leading manufacturer of premium Arabian mejlis, we take great pride in our commitment to quality
  </p>
+ <p class="text-center animate-charcter3 amharic-content">
+  የፕሪሚየም አረብ መጅሊስ ግንባር ቀደም አምራች እንደመሆናችን ለጥራት ባለን ቁርጠኝነት ትልቅ ኩራት ይሰማናል።
+</p>
                       </div>
                     </div>
                   </div>
@@ -195,26 +223,40 @@
     <div class='md:w-2/3'>
       <div class="mt-3">
         <div class='md:text-center'>
-          <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] ">
+          <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] english-content ">
           About Us
           </h2>
+          <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] amharic-content ">
+            ስለ እኛ
+            </h2>
         </div>
       </div>
       <div class="mt-5">
-        <p class="font-bold text-2xl text-[#075985] ">
+        <p class="font-bold text-2xl text-[#075985] english-content ">
         Welcome to Zidlena Arabian Mejlis.
         </p>
+        <p class="font-bold text-2xl text-[#075985] amharic-content ">
+          እንኳን ወደ ዚድለና አረብያን መጅሊስ በድህና መጡ
+          </p>
       </div>
       <div class="mt-3">
-        <p class="">
-          At Zidlena Arabian Majlis, we take pride in our 3-year journey as a quality furniture producer in Ethiopia. Inspired by the desire to create a household product that combines elegance and affordability, our founders have built a team of skilled artisans who meticulously craft each piece to the highest standards.
+        <p class="english-content">
+          At Zidlena Arabian Majlis, we take pride in our 7-year journey as a quality furniture producer in Ethiopia. Inspired by the desire to create a household product that combines elegance and affordability, our founders have built a team of skilled artisans who meticulously craft each piece to the highest standards.
         </p>
+
+        <p class="amharic-content">
+          ለቤትዎ ጊዜ የማይሽረው ውበትን መፍጠርከሶስት ከሰባት አመት በላይ ልምድ ባካበተው ድርጅታችን በጥራታቸው ልዪ የሆኑ፤ በምቾታቸው ወደር የማይገኝላቸው አረብያን መጅሊሶችን በማምረት በተመጣጣኝ ዋጋ ለደንበኞቻችን በማቅረብ ላይ እንገኛለን፡፡ እርሶስ ለቤቶ፣ ለቤተሰቦ፣ ወይም ለወዳጅ ዘመዶ አረቢያን መጅሊሶችን ለመግዛት አስበዋል፤ እንግዲያውስ ወደ ዚድላና አረቢያን መጅሊስ ይምጡ ከጠበቁት በላይ አግኝተው ተደስተው ይመለሳሉ፤ እርሶ ያሰቡት የተለየ ዲዛይን ካለም የማክሩን ያሰቡትን ሰርተን እናስረክቦታለን፡፡
+        </p>
+        
       
-        <p class=" mt-1 hidden" id="readmore">
-     Zidlena Arabian Majlis is the leading manufacturer of exquisite Arabian-inspired furniture in Ethiopia. With a commitment to quality and a passion for preserving traditional craftsmanship, we bring the rich cultural heritage of Arab design to your living spaces.
-        <button class="text-[#075985] hover:text-green btn-read" id="change" onclick="change()">
-          Readmore...
-        </button>
+        <p class=" mt-1  english-content" id="readmore">
+     Zidlena Arabian Majlis is the leading manufacturer of exquisite Arabian-inspired furniture in Ethiopia. With a commitment to quality and a passion for preserving traditional craftsmanship, we bring the rich cultural heritage of Arab design to your living spaces.</p>
+           
+     <p class=" mt-1  amharic-content" id="readmore">
+      በሀገራችን ከሚገኙ አረቢያን መጅሊስ አምራቾች ስመጥር በሆነው ፋብሪካችን ጥራትን ከምቾት ያጣመሩ አረብያን መጅሊሶችን አዘጋጅተን እንጠብቃችህዋለን፡፡ ቤቶን በአረቢያን መጅሊሶች ለማሳመር አስበዋል እንግዲያውስ ዚድላና አረቢያን መጅሊስን ሳይጎበኙ እንዳይወስኑ፡፡</p>
+    <!--  <button class="text-[blue] hover:text-green btn-read" id="readmorebutton" onclick="Readmore()">
+      Read More/ተጨማሪ ያንብቡ
+    </button> -->
       </div>
     </div>
   </div>
@@ -223,42 +265,69 @@
 </main>
 
       </section>
-        <section id='whyus'> <div class="md:text-center"> <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] mt-5 mb-5"> Why Choose Us? </h2> </div>
+        <section id='whyus'> <div class="md:text-center"> 
+          <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] mt-5 mb-5 english-content"> Why Choose Us? </h2> 
+          <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] mt-5 mb-5 amharic-content"> ለምን እኛን ይመርጣሉ?? </h2> 
+        </div>
               <main class="container-fluid bg-white py-5 flex justify-center">
                 <div class="md:flex justify-center lg:w-3/5 sm:w-5/6 w-96 relative mt-7">
                   <div class="bg-[#082f49] grid content-center rounded-l-[15px] rounded-r-[15px] h-48 md:h-auto md:rounded-l-[40px] md:rounded-r-none px-3 p-5 mx-5 md:mx-0">
-                    <h2 class="font-bold text-white lg:text-3xl text-2xl">
+                    <h2 class="font-bold text-white lg:text-3xl text-2xl english-content">
                     Why Us?
                     </h2>
-                    <p class="text-white md:flex text-xs md:text-base mt-1">
+                    <h2 class="font-bold text-white lg:text-3xl text-2xl amharic-content">
+                      ምን ይለየናል?
+                      </h2>
+                    <p class="text-white md:flex text-xs md:text-base mt-1 english-content">
                     As a leading manufacturer of premium Arabian mejlis, we take great pride in our commitment to quality, craftsmanship, and customer satisfaction.
                     </p>
+                    <p class="text-white md:flex text-xs md:text-base mt-1 amharic-content">
+                      የፕሪሚየም አረብ መጅሊስ ግንባር ቀደም አምራች እንደመሆናችን ለጥራት፣ ለዕደ ጥበብ እና ለደንበኛ እርካታ ባለን ቁርጠኝነት ትልቅ ኩራት ይሰማናል።
+                      </p>
                   </div>
                   <div class="p-5 content-center rounded-r-[20px] md:rounded-r-[40px] flex justify-center">
                     <div class="cards">
                       <div class="card red md:w-[350px] w-full px-3 ">
-                        <p class="tip">
+                        <p class="tip english-content">
                         Durability
                         </p>
-                        <p class="second-text">
+                        <p class="tip amharic-content">
+                          ዘላቂነት
+                          </p>
+                        <p class="second-text english-content">
                         Our mejlis are built to last, withstanding the test of time and everyday use. We stand behind the quality of our craftsmanship with a comprehensive warranty, giving you the peace of mind that your investment will last for years to come.
                         </p>
+                        <p class="second-text amharic-content">
+                          የእኛ መጅሊሶች የጊዜ እና የዕለት ተዕለት አጠቃቀምን ፈተና በመቋቋም ዘላቂነት ያላቸው ናቸው። ኢንቨስትመንትዎ ለሚቀጥሉት አመታት የሚቆይበትን የአእምሮ ሰላም በመስጠት ከዕደ ጥበብ ስራችን ጥራት በስተጀርባ ቆመናል።
+                          </p>
                       </div>
                       <div class="card blue md:w-[350px] w-full px-3">
-                        <p class="tip">
+                        <p class="tip english-content">
                         Exceptional Customer Service
                         </p>
-                        <p class="second-text">
+                        <p class="tip amharic-content">
+                          ልዩ የደንበኞች አገልግሎት
+                          </p>
+                        <p class="second-text english-content">
                         From the moment you inquire about our products to the day your mejlis is delivered, our dedicated team is here to assist you. We pride ourselves on our responsiveness, attention to detail, and commitment to ensuring your complete satisfaction.
                         </p>
+                        <p class="second-text amharic-content">
+                          ስለ ምርቶቻችን ከጠየቃቹ ጊዜ ጀምሮ መጅሊሱ እስከሚደርስ ድረስ የኛ ቁርጠኛ ቡድን ሊረዳቹ ተዠጋጅታል።
+                          </p>
                       </div>
                       <div class="card green md:w-[350px] w-full px-3">
-                        <p class="tip">
+                        <p class="tip english-content">
                         Customizable Options
                         </p>
-                        <p class="second-text">
+                        <p class="tip amharic-content">
+                          የተለያዩ አማራጮች
+                          </p>
+                        <p class="second-text english-content">
                         We understand that every home and personal style is unique. That's why we offer a wide range of customization options, allowing you to tailor the size, color, and upholstery of your mejlis to perfectly suit your space and preferences.
                         </p>
+                        <p class="second-text amharic-content">
+                          እያንዳንዱ ቤት እና የግል ዘይቤ ልዩ እንደሆነ እንረዳለን። ለዛም ነው የመጅሊሶቹን መጠን፣ ቀለም እና ጨርቃጨርቅ ለቦታዎ እና ለምርጫዎ ተስማሚ በሆነ መልኩ አማራጮችን እናቀርባለን።
+                          </p>
                       </div>
                     </div>
                   </div>
@@ -267,12 +336,15 @@
             
               </section>
               <section id="products"> <section class="flex flex-col gap-7 py-7"> <div class="md:text-center"> 
-                <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] mb-5"> Products
-                   </h2> </div> <div class="flex justify-center"> 
+                <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] mb-5 english-content"> Products </h2>
+                <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] mb-5 amharic-content">ምርቶች  </h2>
+                  
+                   </div>
+                    <div class="flex justify-center"> 
                     <div class="flex md:flex-row flex-col gap-7">
                       <div class="card2 w-80">
                         <div class="image_container">
-                          <img src="./images/a1.jpg" style="width: fit-content;" class="image"/>
+                          <img src="./images/a1.jpg" alt="Arabian Mejlis" style="width: fit-content;" class="image"/>
                         
                         </div>
                         <div class="title pl-3">
@@ -302,7 +374,7 @@
                       
                       <div class="card2 w-80">
                         <div class="image_container">
-                          <img src="./images/b2.jpg" style="width: fit-content;" class="image"/>
+                          <img src="./images/b2.jpg" alt="Arabian Mejlis" style="width: fit-content;" class="image"/>
                         
                         </div>
                         <div class="title pl-3">
@@ -338,7 +410,8 @@
                 <div class="py-7 lg:pb-0">
                     <div class="md:text-center">
                         <h2 class="font-bold text-center lg:text-4xl text-2xl text-[#075985] mb-5">
-                            <span id="contact-title">Get in touch</span>
+                            <span id="contact-title" class="english-content">Get in touch</span>
+                            <span id="contact-title" class="amharic-content">ከእኛ ጋር ይገናኙ</span>
                         </h2>
                     </div>
                     <section class="bg-[url('./images/a7.jpg')] cover">
@@ -347,16 +420,20 @@
                                 <div class="border-1 bg-white lg:w-2/5 md:w-3/5 w-5/6 flex justify-center py-4">
                                     <div class="w-4/5 flex flex-col gap-3">
                                         <div>
-                                            <p class="text-center lg:text-[14px] text-[12px] text-[#075985]" id="contact-description">
+                                            <p class="text-center lg:text-[14px] text-[12px] text-[#075985] english-content" id="contact-description">
                                                 Feel Free to contact us about any questions you may have.
                                             </p>
+                                            <p class="text-center lg:text-[14px] text-[12px] text-[#075985] amharic-content" id="contact-description">
+                                              ለሚኖሩዎት ማንኛውም ጥያቄዎች እኛን ለማነጋገር ነፃነት ይሰማዎ።
+                                          </p>
                                         </div>
                                         <div class="flex justify-center">
-                                            <form class="flex flex-col gap-2" onsubmit="handleSubmit(event)">
+                                            <form class="flex flex-col gap-2" onsubmit="handleSubmit()">
                                                 <div class="flex justify-center">
                                                     <div class="flex flex-col">
                                                         <div>
-                                                            <input type="text" onblur="handleBlur(event)" onchange="handleChange(event)" name="name" placeholder="Name" class="bg-slate-200 py-2 pl-2">
+                                                            <input type="text"  name="name" placeholder="Name" class="bg-slate-200 py-2 pl-2 english-content">
+                                                            <input type="text"   name="name" placeholder="ስም" class="bg-slate-200 py-2 pl-2 amharic-content">
                                                         </div>
                                                         <div id="error-name" class="text-rose-700 text-xs mt-1 ml-3"></div>
                                                     </div>
@@ -364,7 +441,8 @@
                                                 <div class="flex justify-center">
                                                     <div class="flex flex-col">
                                                         <div>
-                                                            <input type="email" onblur="handleBlur(event)" onchange="handleChange(event)" name="email" placeholder="Email" class="bg-slate-200 py-2 pl-2">
+                                                            <input type="email"  name="email" placeholder="Email" class="bg-slate-200 py-2 pl-2 english-content">
+                                                            <input type="email"  name="email" placeholder="ኢሜይል" class="bg-slate-200 py-2 pl-2 amharic-content">
                                                         </div>
                                                         <div id="error-email" class="text-rose-700 text-xs mt-1 ml-3"></div>
                                                     </div>
@@ -372,7 +450,8 @@
                                                 <div class="flex justify-center">
                                                     <div class="flex flex-col">
                                                         <div>
-                                                            <input type="tel" onblur="handleBlur(event)" onchange="handleChange(event)" name="phone" placeholder="Phone number" class="bg-slate-200 py-2 pl-2">
+                                                            <input type="tel"  name="phone" placeholder="Phone number" class="bg-slate-200 py-2 pl-2 english-content">
+                                                            <input type="tel"  name="phone" placeholder="ስልክ ቁጥር" class="bg-slate-200 py-2 pl-2 amharic-content">
                                                         </div>
                                                         <div id="error-phone" class="text-rose-700 text-xs mt-1 ml-3"></div>
                                                     </div>
@@ -380,14 +459,16 @@
                                                 <div class="flex justify-center">
                                                     <div class="flex flex-col">
                                                         <div>
-                                                            <input onblur="handleBlur(event)" onchange="handleChange(event)" name="message" placeholder="Message" class="bg-slate-200 h-[80px] py-2 pl-2">
+                                                            <input  name="message" placeholder="Message" class="bg-slate-200 h-[80px] py-2 pl-2 english-content">
+                                                            <input  name="message" placeholder="መልእክት" class="bg-slate-200 h-[80px] py-2 pl-2 amharic-content">
                                                         </div>
                                                         <div id="error-message" class="text-rose-700 text-xs mt-1 ml-3"></div>
                                                     </div>
                                                 </div>
                                                 <div class="flex justify-center mt-2">
                                                     <button type="submit" class="bg-[#075985] p-1">
-                                                        <span id="send-button">Send</span>
+                                                        <span id="send-button" class="english-content">Send</span>
+                                                        <span id="send-button" class="amharic-content">ላክ</span>
                                                     </button>
                                                 </div>
                                             </form>
@@ -399,6 +480,8 @@
                     </section>
                 </div>
             </section>
+
+         
 
             <section id="footer" class="mt-5">
               <div class="container-fluid">
@@ -425,32 +508,46 @@
                         <div class="lg:flex lg:justify-between lg:w-full w-4/5 grid gap-5 lg:gap-0 lg:px-5">
                           <div class="flex flex-col gap-1 lg:w-1/3">
                             <iframe
-                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1222073449103!2d106.77590781537452!3d-6.2476228629146675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f11b12c11ab7%3A0xcd48f5c775249316!2sHumanity%20First%20Indonesia!5e0!3m2!1sid!2sid!4v1605684563677!5m2!1sid!2sid"
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.2565294906867!2d38.71066397399636!3d9.04034828881332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8972e55151ff%3A0x1f9f18f4c4b59731!2sZidlena%20Arabian%20Mejlis!5e0!3m2!1sen!2set!4v1717171008393!5m2!1sen!2set"
                               frameborder="0"
                               style="border: 0"
                               aria-hidden="false"
-                              title="Humanity First Indonesia"
+                              title="Zidlena Arabian Mejlis"
                             ></iframe>
                           </div>
                           <div class="flex flex-col gap-1 lg:w-1/3">
-                            <h2 class="font-bold text-lg">
-                              <!-- Assuming 'language' is a JavaScript variable -->
-                              <!-- Replace with actual content or logic to render content based on language -->
+                            <h2 class="font-bold text-lg english-content">
+        
                               Address
                             </h2>
-                            <a href="#">Addis Ababa City, Atena Tera</a>
-                            <a href="#">Efoyta Gebeya Meakel</a>
-                            <a href="#">First Floor BA/GF007</a>
+                            <h2 class="font-bold text-lg amharic-content">
+        
+                              አድራሻ
+                            </h2>
+                            <a href="#" class="english-content">Addis Ababa City, Atena Tera</a>
+                            <a href="#" class="english-content">Efoyta Gebeya Meakel</a>
+                            <a href="#" class="english-content">First Floor BA/GF007</a>
+
+                            <a href="#" class="amharic-content">አዲስ አበባ ከተማ አተና ተራ</a>
+                            <a href="#" class="amharic-content">እፎይታ ገበያ መአከል</a>
+                            <a href="#" class="amharic-content">የመጀመሪያ ፎቅ BA/GF007</a>
+
                             <a href="#">0916800744/0923854774</a>
                             <a href="#">info@zidlenaarabianmejlis.com</a>
+
                           </div>
                           <div class="flex flex-col gap-5 lg:w-1/3">
                             <div class="flex flex-col gap-1">
                               <h2 class="font-bold text-lg">Links</h2>
-                              <a href="#home">Home</a>
-                              <a href="#about">About Us</a>
-                              <a href="#products">Products</a>
-                              <a href="#contact">Contact Us</a>
+                              <a href="#home" class="cursor-pointer hover:text-green-500 transition-colors duration-300 english-content">Home</a>
+                              <a href="#about" class="cursor-pointer hover:text-green-500 transition-colors duration-300 english-content">About Us</a>
+                              <a href="#products" class="cursor-pointer hover:text-green-500 transition-colors duration-300 english-content">Products</a>
+                           
+
+                              <a href="#home" class="cursor-pointer hover:text-green-500 transition-colors duration-300 amharic-content">መነሻገፅ</a>
+                              <a href="#about" class="cursor-pointer hover:text-green-500 transition-colors duration-300 amharic-content">ስለ እኛ</a>
+                              <a href="#products" class="cursor-pointer hover:text-green-500 transition-colors duration-300 amharic-content">ምርቶች</a>
+                   
                             </div>
                           </div>
                         </div>
@@ -470,9 +567,87 @@
                                 <li><a href="https://www.youtube.com/@abdulkerimoumer8464" target="_blank"><!-- FontAwesomeIcon for YouTube --></a
   
     </div>
+  
 
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>
     <script src="./scripts/customer.js"></script>
+    <script src="./scripts/form.js"></script>
+
+    <script>
+   let buttonText = "Read More/ተጨማሪ ያንብቡ";
+
+function Readmore() {
+  const lessText = "Read Less/ያነሰ ያንብቡ";
+  const moreText = "Read More/ተጨማሪ ያንብቡ";
+
+  const readmoreElement = document.getElementById('readmore');
+  if (readmoreElement) {
+    readmoreElement.classList.toggle('hidden');
+  }
+
+  const buttonElement = document.getElementById('readmorebutton');
+  if (buttonElement) {
+    if (buttonText === moreText) {
+      buttonText = lessText;
+    } else {
+      buttonText = moreText;
+    }
+    buttonElement.textContent = buttonText;
+  }
+}
+
+
+const englishContent = document.querySelectorAll('.english-content');
+const amharicContent = document.querySelectorAll('.amharic-content');
+const languageSwitch = document.getElementById('cb2-7');
+
+for (let i = 0; i < amharicContent.length; i++) {
+
+
+  amharicContent[i].style.display = 'none';
+
+}
+
+
+
+
+languageSwitch.addEventListener('change', () => {
+  if (languageSwitch.checked) {
+    //englishContent.style.display = 'none';
+    //amharicContent.style.display = 'block';
+    for (let i = 0; i < amharicContent.length; i++) {
+
+
+amharicContent[i].style.display = 'block';
+
+}
+
+for (let i = 0; i < englishContent.length; i++) {
+
+
+englishContent[i].style.display = 'none';
+
+}
+
+  } else {
+    //englishContent.style.display = 'block';
+    //amharicContent.style.display = 'none';
+    for (let i = 0; i < amharicContent.length; i++) {
+
+
+amharicContent[i].style.display = 'none';
+
+}
+
+for (let i = 0; i < englishContent.length; i++) {
+
+
+englishContent[i].style.display = 'block';
+
+}
+  }
+});
+    </script>
 
 
    

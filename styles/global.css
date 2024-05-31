@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Apply the Poppins font to the whole page */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+li.mb-1.font-bold.text-sm.text-cyan-700 a {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  li.mb-1.font-bold.text-sm.text-cyan-700 a:hover {
+    color: #34d399;
+  }
+
+  
