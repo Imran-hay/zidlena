@@ -13,4 +13,40 @@ li.mb-1.font-bold.text-sm.text-cyan-700 a {
     color: #34d399;
   }
 
-  
+  .image_container5 {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image5 {
+    transition: transform 7s ease;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .image_container6 {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image6 {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+
+  .fade-in-out {
+    animation: fadeInOut 7s infinite;
+  }

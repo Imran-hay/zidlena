@@ -1,3 +1,80 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+$status = '';
+// Check if the request method is POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Retrieve the form data from the POST request
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $message = $_POST['message'];
+
+
+
+ 
+
+try {
+    //Server settings
+                      //Enable verbose debug output
+   // $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+    $mail->SMTPOptions = array(
+      'ssl' => array(
+      'verify_peer' => false,
+      'verify_peer_name' => false,
+      'allow_self_signed' => true
+      )
+      );
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'zidlena017@gmail.com';                     //SMTP username
+    $mail->Password   = 'islprsrqkimndlmj';                               //SMTP password
+    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+    //Recipients
+    $mail->setFrom('zidlena017@gmail.com', 'Zidlena Mejlis Website');
+    $mail->addAddress('info@zidlenaarabianmejlis.com', 'Abdulkerim');     //Add a recipient
+    //$mail->addAddress('ellen@example.com');               //Name is optional
+    //$mail->addReplyTo('info@example.com', 'Information');
+    //$mail->addCC('cc@example.com');
+    //$mail->addBCC('bcc@example.com');
+
+
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'A message from your website';
+    $mail->Body = 'Name: ' . $name . '<br>' .
+    'Email: ' . $email . '<br>' .
+    'Phone: ' . $phone . '<br>' .
+    'Message: ' . $message . '<br>' ;
+   
+
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $mail->send();
+    //echo 'Message has been sent';
+    $status = 'Message has been sent';
+    header("refresh:2");
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    $status = 'Message could not be sent. Please try again later';
+    header("refresh:2");
+}
+
+}
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -7,10 +84,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="zidlena arabian mejlis">
     <meta name="description" content="An arabian mejlis manufacturing company">
-    <meta name="keywords" content="zidlena arabian mejlis, arabian mejlis,ethiopia arabian mejlis,arbiyan mejlis">
+    <meta name="keywords" content="zidlena arabian mejlis,mejlis, arabian mejlis,ethiopia arabian mejlis,arbiyan mejlis">
     <meta name="image" content="https://zidlena.vercel.app/newLogo.jpg">
     <meta name="author" content="Zidlena Arabian Mejlis">
-    <meta  property="og:title" content="zidlena arabian mejlis">
+    <meta  property="og:title" content="Zidlena Arabian Mejlis">
     <meta  property="og:description" content="An arabian mejlis manufacturing company">
     <meta property="og:image" content="https://zidlena.vercel.app/newLogo.jpg" >
 
@@ -351,34 +428,38 @@
                     <div class="flex justify-center"> 
                     <div class="flex md:flex-row flex-col gap-7">
                       <div class="bg-slate-900 rounded-lg">
-                        <div class="">
-                          <img src="./images/a1.jpg" alt="Arabian Mejlis" class="w-[350px] h-[250px] rounded-t-lg"/>
+                        <div class=" image_container6">
+                          <img src="./images/a1.jpg" id="card_image" alt="Arabian Mejlis" class="w-[350px] h-[250px] rounded-t-lg image6 fade-in"/>
                         
                         </div>
                         <div class="flex flex-col text-white gap-3 pt-5 pb-9">
                           <div>
-                            <h2 class="pl-7 text-bold text-lg">Product deatals</h2>
+                            <h2 class="pl-7 text-bold text-lg english-content">Furniture Mejlis</h2>
+                            <h2 class="pl-7 text-bold text-lg amharic-content">ፈርኒቸር መጅሊስ</h2>
                           </div>
                           <div class="flex justify-end pr-7">
                             <div>
-                              <button class="bg-indigo-800 py-3 px-4 text-sm rounded-md shadow-2xl shadow-indigo-500/50">Order Now</button>
+                              <button class="bg-indigo-800 py-3 px-4 text-sm rounded-md shadow-2xl shadow-indigo-500/50 english-content scrollToContact" id="scrollToContact">Order Now</button>
+                              <button class="bg-indigo-800 py-3 px-4 text-sm rounded-md shadow-2xl shadow-indigo-500/50 amharic-content scrollToContact" id="scrollToContact">አሁን እዘዝ</button>
                             </div>
                           </div>
                         </div>
                       </div>
                       
                       <div class="bg-slate-900 rounded-lg">
-                        <div class="">
-                          <img src="./images/b2.jpg" alt="Arabian Mejlis" class="w-[350px] h-[250px] rounded-t-lg" />
+                        <div class="image_container6">
+                          <img src="./images/b2.jpg" id="card_image2" alt="Arabian Mejlis" class="w-[350px] h-[250px] rounded-t-lg image6 fade-in" />
                         
                         </div>
                         <div class="flex flex-col text-white gap-3 pt-5 pb-9">
                           <div>
-                            <h2 class="pl-7 text-bold text-lg">Product deatals</h2>
+                            <h2 class="pl-7 text-bold text-lg english-content">Bonded Mejlis</h2>
+                            <h2 class="pl-7 text-bold text-lg amharic-content">ቦንድድ መጅሊስ</h2>
                           </div>
                           <div class="flex justify-end pr-7">
                             <div>
-                              <button class="bg-indigo-800 py-3 px-4 text-sm rounded-md shadow-2xl shadow-indigo-500/50">Order Now</button>
+                              <button class="bg-indigo-800 py-3 px-4 text-sm rounded-md shadow-2xl shadow-indigo-500/50 english-content scrollToContact" id="scrollToContact">Order Now</button>
+                              <button class="bg-indigo-800 py-3 px-4 text-sm rounded-md shadow-2xl shadow-indigo-500/50 amharic-content scrollToContact" id="scrollToContact">አሁን እዘዝ</button>
                             </div>
                           </div>
                         </div>
@@ -410,7 +491,7 @@
                                           </p>
                                         </div>
                                         <div class="flex justify-center">
-                                          <form class="flex flex-col gap-2" onsubmit="handleSubmit()">
+                                          <form class="flex flex-col gap-2" id="contact-form" onsubmit="handleSubmit()">
                                             <div class="flex justify-center">
                                                 <div class="flex flex-col">
                                                     <div>
@@ -518,7 +599,7 @@
                             <a href="#" class="amharic-content">እፎይታ ገበያ መአከል</a>
                             <a href="#" class="amharic-content">የመጀመሪያ ፎቅ BA/GF007</a>
 
-                            <a href="#">0916800744/0923854774</a>
+                            <a href="tel:+251916800744" class="cursor-pointer hover:text-green-500 transition-colors duration-300">0916800744/0923854774</a>
                             <a href="#">info@zidlenaarabianmejlis.com</a>
 
                           </div>
@@ -551,7 +632,7 @@
     <ul class="flex flex-row gap-4 bg-white rounded-md p-1 h-full">
       
       <li>
-        <a href="https://www.tiktok.com/@abdulkerim.oumer8" target="_blank">
+        <a href="https://www.facebook.com/profile.php?id=100095151285637" target="_blank">
           <i class="fa fa fa-facebook" style="font-size:24px; color: dodgerblue;"></i>
         </a>
       </li>
@@ -578,144 +659,173 @@
     <script src="https://use.fontawesome.com/1744f3f671.js"></script>
     <script src="./scripts/customer.js"></script>
     <script>
-      const nameInput = document.querySelector('input[name="name"]');
-const emailInput = document.querySelector('input[name="email"]');
-const phoneInput = document.querySelector('input[name="phone"]');
-const messageInput = document.querySelector('input[name="message"]');
-const sendButton = document.querySelector('#send-button');
-const errorName = document.querySelector('#error-name');
-const errorEmail = document.querySelector('#error-email');
-const errorPhone = document.querySelector('#error-phone');
-const errorMessage = document.querySelector('#error-message');
+      var scrollToContactButtons = document.querySelectorAll('.scrollToContact');
+      var contactSection = document.getElementById('contact');
+    
+      scrollToContactButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    </script>
+    <script>
+      var imageUrls1 = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg', './images/a4.jpg', './images/a5.jpg', './images/a6.jpg', './images/a7.jpg'];
+      var imageElement1 = document.getElementById('card_image');
+      var currentIndex1 = 0;
+    
+      var imageUrls2 = ['./images/b1.jpg', './images/b2.jpg', './images/b3.jpg', './images/b4.jpg'];
+      var imageElement2 = document.getElementById('card_image2');
+      var currentIndex2 = 0;
+    
+      function changeImage() {
+        imageElement1.classList.remove('fade-in');
+        imageElement2.classList.remove('fade-in');
+    
+        setTimeout(function() {
+          imageElement1.src = imageUrls1[currentIndex1];
+          imageElement1.classList.add('fade-in');
+    
+          imageElement2.src = imageUrls2[currentIndex2];
+          imageElement2.classList.add('fade-in');
+    
+          currentIndex1++;
+          currentIndex2++;
+    
+          if (currentIndex1 >= imageUrls1.length) {
+            currentIndex1 = 0;
+          }
+    
+          if (currentIndex2 >= imageUrls2.length) {
+            currentIndex2 = 0;
+          }
+        }, 500);
+      }
+    
+      setInterval(changeImage, 3000);
+    </script>
+     <script>
+  const form = document.getElementById('contact-form');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
+  const messageInput = document.getElementById('message');
+  const errorName = document.getElementById('error-name');
+  const errorEmail = document.getElementById('error-email');
+  const errorPhone = document.getElementById('error-phone');
+  const errorMessage = document.getElementById('error-message');
 
-// Validation functions
-function validateName() {
-    let nameInput = document.querySelector('input[name="name"]'); // assuming you have an input field with this ID
-    let errorName = document.querySelector('#error-name'); // assuming you have an element to display the error message
-  
+  function validateName() {
     let nameValue = nameInput.value.trim();
-  
-    // Check if the name is empty
+
     if (nameValue === '') {
       errorName.textContent = 'Please enter your name.';
       return false;
     }
-  
-    // Check if the name only contains alphabets and spaces
+
     let nameRegex = /^[a-zA-Z\s]+$/;
     if (!nameRegex.test(nameValue)) {
       errorName.textContent = 'Name can only contain alphabets and spaces.';
       return false;
     }
-  
-    // If all checks pass
+
     errorName.textContent = '';
     return true;
   }
 
-function validateEmail() {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(emailInput.value.trim())) {
-    errorEmail.textContent = 'Please enter a valid email address.';
-    return false;
-  } else {
-    errorEmail.textContent = '';
-    return true;
+  function validateEmail() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value.trim())) {
+      errorEmail.textContent = 'Please enter a valid email address.';
+      return false;
+    } else {
+      errorEmail.textContent = '';
+      return true;
+    }
   }
-}
 
-function validatePhone() {
-  const phoneRegex = /^\+?\d{1,3}?[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/;
-  if (!phoneRegex.test(phoneInput.value.trim())) {
-    errorPhone.textContent = 'Please enter a valid phone number.';
-    return false;
-  } else {
-    errorPhone.textContent = '';
-    return true;
+  function validatePhone() {
+    const phoneRegex = /^\+?\d{1,3}?[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/;
+    if (!phoneRegex.test(phoneInput.value.trim())) {
+      errorPhone.textContent = 'Please enter a valid phone number.';
+      return false;
+    } else {
+      errorPhone.textContent = '';
+      return true;
+    }
   }
-}
 
-function validateMessage() {
-    let messageInput = document.querySelector('input[name="message"]');// assuming you have an input field with this ID
-    let errorMessage = document.querySelector('#error-message'); // assuming you have an element to display the error message
-  
+  function validateMessage() {
     let messageValue = messageInput.value.trim();
-  
-    // Check if the message is empty
+
     if (messageValue === '') {
       errorMessage.textContent = 'Please enter a message.';
       return false;
     }
-  
-    // Check if the message only contains alphabets, numbers, and spaces
+
     let messageRegex = /^[a-zA-Z0-9\s]+$/;
     if (!messageRegex.test(messageValue)) {
       errorMessage.textContent = 'Message can only contain alphabets, numbers, and spaces.';
       return false;
     }
-  
-    // If all checks pass
+
     errorMessage.textContent = '';
     return true;
   }
 
-// Form submission handler
-async function handleSubmit(event) {
-  event.preventDefault();
- 
+  async function handleSubmit(event) {
+    event.preventDefault();
 
-  const isNameValid = validateName();
-  const isEmailValid = validateEmail();
-  const isPhoneValid = validatePhone();
-  const isMessageValid = validateMessage();
+    const isNameValid = validateName();
+    const isEmailValid = validateEmail();
+    const isPhoneValid = validatePhone();
+    const isMessageValid = validateMessage();
 
-  if (isNameValid && isEmailValid && isPhoneValid && isMessageValid) {
-    try {
-      // Prepare the form data
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        message: document.getElementById('message').value
-      };
+    if (isNameValid && isEmailValid && isPhoneValid && isMessageValid) {
+      try {
+        const formData = {
+          name: nameInput.value,
+          email: emailInput.value,
+          phone: phoneInput.value,
+          message: messageInput.value
+        };
 
-      // Make a POST request to your PHP file
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          var response = this.responseText;
-          console.log(response);
-        }
-      };
-      
-      xhttp.open("POST", "index.php", true);
-      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      
-      // Convert the formData object to a URL-encoded string
-      var params = Object.keys(formData).map(function(key) {
-        return encodeURIComponent(key) + "=" + encodeURIComponent(formData[key]);
-      }).join("&");
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var response = this.responseText;
+            console.log(response);
+          }
+        };
 
-      alert("Successfully sent email")
-      
-      xhttp.send(params);
-    } catch (error) {
-      console.error('Error sending email:', error);
+        xhttp.open("POST", "index.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        var params = Object.keys(formData).map(function(key) {
+          return encodeURIComponent(key) + "=" + encodeURIComponent(formData[key]);
+        }).join("&");
+
+        alert("message sent successfully")
+
+        xhttp.send(params);
+      } catch (error) {
+        console.error('Error sending email:', error);
+      }
     }
   }
-}
-
-// Event listeners
-nameInput.addEventListener('change', validateName);
+  nameInput.addEventListener('change', validateName);
 nameInput.addEventListener('blur', validateName);
+
 emailInput.addEventListener('change', validateEmail);
 emailInput.addEventListener('blur', validateEmail);
+
 phoneInput.addEventListener('change', validatePhone);
 phoneInput.addEventListener('blur', validatePhone);
+
 messageInput.addEventListener('change', validateMessage);
 messageInput.addEventListener('blur', validateMessage);
-sendButton.addEventListener('click', handleSubmit);
-    </script>
+
+  form.addEventListener('submit', handleSubmit);
+</script>
 
     <script>
       function toggleNavigation() {
